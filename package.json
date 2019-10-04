@@ -2,17 +2,21 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://aibotian.github.io/my-blog",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev nodemon ./bin/www.js",
-    "prd": "cross-env NODE_ENV=production nodemon ./bin/www.js"
+    "prd": "cross-env NODE_ENV=production nodemon ./bin/www.js",
+    "predeploy": "node ./scripts/build.js",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "gh-pages": "^2.1.1",
     "nodemon": "^1.18.11"
   },
   "dependencies": {
